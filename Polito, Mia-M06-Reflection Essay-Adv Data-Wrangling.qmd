@@ -15,7 +15,7 @@ format:
     code-overflow: scroll
     embed-resources: true
     highlight-style: github
-    output-file: index.html
+output-file: index.html
 editor: visual
 execute: 
   freeze: auto
