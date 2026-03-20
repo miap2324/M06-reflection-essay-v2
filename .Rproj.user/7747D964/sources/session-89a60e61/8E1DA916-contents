@@ -15,6 +15,7 @@ format:
     code-overflow: scroll
     embed-resources: true
     highlight-style: github
+    output-file: index.html
 editor: visual
 execute: 
   freeze: auto
@@ -34,27 +35,27 @@ Another concept I learned about crossing() from tidyr is that this function crea
 
 ## **Prompt:** What do you think about David Robinson's impromptu screencast performance in Step 2? How much were you able to understand?
 
-After watching the screen cast by David Robinson I found it interesting because it showed the process of exploring and reviewing European energy data in R. Rather than following a precise outline he curated visualizations as he went along solving examined the dataset. From the video I was able to understand the concept of reshaping the data into tidy format. As well as, comparing the energy production from various countries and years by utilizing graphs. The part where I got stuck on was the debugging the coding. I found the video to be informational but also overwhelming as a beginner in R. 
+After watching the screen cast by David Robinson I found it interesting because it showed the process of exploring and reviewing European energy data in R. Rather than following a precise outline he curated visualizations as he went along solving examined the dataset. From the video I was able to understand the concept of reshaping the data into tidy format. As well as, comparing the energy production from various countries and years by utilizing graphs. The part where I got stuck on was the debugging the coding. I found the video to be informational but also overwhelming as a beginner in R.
 
 > Although I struggled with understanding the debugging, following the analyzing did help with concept comprehension.
 
 # Step 3: Compare Initial and Further Data Cleaning
 
-## **Prompt:** In Step 3, you saw two videos, one showing initial data cleaning and the other showing further cleaning. 
+## **Prompt:** In Step 3, you saw two videos, one showing initial data cleaning and the other showing further cleaning.
 
 ### Describe the two processes. What are the big differences between the two?
 
-After watching the two videos I learned that initial data cleaning is centralized on preparing the working dataset at an entry level. When doing so the data may undergo, formatting issues that have to be fixed and filtering the irrelevant information. `The primary goal helps to make the dataset easier to work with and reliable to reference later on.` Initial data cleaning essentially does the bare minimum so that basic issues like errors are fixed and the rest of the data remains. While further data cleaning focuses on the more selective information in a dataset. It cleans out the records that aren't meeting the desired conditions. This can be seen when applying additional criteria such as inclusion and exclusion rules, removing unnecessary observations, and filtering the dataset. 
+After watching the two videos I learned that initial data cleaning is centralized on preparing the working dataset at an entry level. When doing so the data may undergo, formatting issues that have to be fixed and filtering the irrelevant information. `The primary goal helps to make the dataset easier to work with and reliable to reference later on.` Initial data cleaning essentially does the bare minimum so that basic issues like errors are fixed and the rest of the data remains. While further data cleaning focuses on the more selective information in a dataset. It cleans out the records that aren't meeting the desired conditions. This can be seen when applying additional criteria such as inclusion and exclusion rules, removing unnecessary observations, and filtering the dataset.
 
 ### How do the differences result in the differences in final sample size?
 
-The differences between the two processes result in a different final sample size because the initial cleaning simply removes invalid information and duplicates. Compared to the further cleaning that is able to reduce the overall sample size because it undergoes various criteria and filters. 
+The differences between the two processes result in a different final sample size because the initial cleaning simply removes invalid information and duplicates. Compared to the further cleaning that is able to reduce the overall sample size because it undergoes various criteria and filters.
 
 ::: callout-note
 Further data cleaning will help you fix and remove any data that is unnecessary and that doesn't meet specified criteria.
 :::
 
-# Step 4: Understaning Revealjs Presentations
+# Step 4: Understanding Revealjs Presentations
 
 ## **Prompt:** In Step 4, you learned how to create an Revealjs presentation. What's your impression of the Revealjs presentation? Describe its capabilities as you learned from the video. What are its strengths and weaknesses compared with PPT?
 
@@ -62,7 +63,7 @@ When comparing creating with the Revealjs presentation to creating with PowerPoi
 
 # Step 5: Creating A Revealjs Presentation
 
-## **Prompt:** In Step 5, you were asked to create a Revealjs presentation. Provide a link to the presentation you published on the web. 
+## **Prompt:** In Step 5, you were asked to create a Revealjs presentation. Provide a link to the presentation you published on the web.
 
 <https://miap2324.github.io/portfolio-website-presentation/>
 
@@ -74,12 +75,11 @@ The presentation is about my preparation method for creating a professional port
 
 ## **Prompt:** Pick three newly introduced concept, describe when to use them, and give one coding example along with an output for each function.
 
-| Function | Purpose |
-|--------|--------|
-| count() | Counts observations |
-| distinct() | Removes duplicates |
-| across() | Applies functions to multiple columns |
-
+| Function   | Purpose                               |
+|------------|---------------------------------------|
+| count()    | Counts observations                   |
+| distinct() | Removes duplicates                    |
+| across()   | Applies functions to multiple columns |
 
 ::: panel-tabset
 ## case_when()
@@ -138,13 +138,16 @@ After working with the tools I learned in this module I learned that they made c
 
 ## **Prompt:** What seems to be the challenge, if any, for you when you try to master the wrangling tools? How may you be able to overcome the challenge?
 
-A personal challenge when trying to master the wrangling tools is recalling which functions are meant to create particular commands or visualizations. 
+A personal challenge when trying to master the wrangling tools is recalling which functions are meant to create particular commands or visualizations.
 
--   Due to that fact that the tidyr and dplyr have an abundance of functions it becomes confusing. 
--   When writing code, this challenge makes it all the more confusing and results in elongated research. 
+-   Due to that fact that the tidyr and dplyr have an abundance of functions it becomes confusing.
+
+-   When writing code, this challenge makes it all the more confusing and results in elongated research.
 
 -   `I may overcome this challenge by referencing a code book, whether that is my own or one created by an instructor.` I also practice recall through repetition of functions and smaller data sets.
 
 # Published Report
 
 ## **Prompt:** Publish this report to a web page (preferably on GitHub Pages) and add the URL to your qmd file so that your HTML file will have the link to the website.
+
+<https://miap2324.github.io/M06-reflection-essay-v2/>
