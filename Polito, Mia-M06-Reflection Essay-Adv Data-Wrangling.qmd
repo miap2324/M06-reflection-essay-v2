@@ -2,6 +2,7 @@
 title: "M06-Reflection Essay-Advanced Data Wrangling"
 author: "Mia Polito"
 date: "`r format(Sys.time())`"
+output-file: index.html
 format: 
   html: 
     theme: cosmo
@@ -15,7 +16,6 @@ format:
     code-overflow: scroll
     embed-resources: true
     highlight-style: github
-output-file: index.html
 editor: visual
 execute: 
   freeze: auto
