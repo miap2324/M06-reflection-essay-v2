@@ -1,0 +1,150 @@
+---
+title: "M06-Reflection Essay-Advanced Data Wrangling"
+author: "Mia Polito"
+date: "`r format(Sys.time())`"
+format: 
+  html: 
+    theme: cosmo
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    code-link: true
+    code-fold: true
+    code-tools: true
+    code-overflow: scroll
+    embed-resources: true
+    highlight-style: github
+editor: visual
+execute: 
+  freeze: auto
+---
+
+# Step 1: Learning New Tidyverse Tricks
+
+## **Prompt:** Summarize what you learned about Tidyverse tricks presented in Step 1 by focusing on the new things you learned that were not dealt with in M05.
+
+The Tidyverse Tricks video taught me methods that help organize data more efficiently. The first useful feature is count(), that uses "sort", which quickly counts the number of observations in each category and orders them from most to least common. The "wt" argument can also be used to sum values from another column instead of simply counting rows, and the "name" argument allows you to specify the name of the new count column. Further, I applied this knowledge when creating a new variable with count() to aggreagate data over a larger time periods. For example, grouping years into decades before counting observations.
+
+I also learned about helpful functions from the forcats package. The function fct_reorder() helps improve visualizations by organizing factor levels in ascending or descending order based on another variable. Similarly, fct_lump() can combine less common factor levels into a single “other” category, which simplifies charts when there are many small groups.
+
+Another concept I learned about crossing() from tidyr is that this function creates all possible combinations of selected variables, which helps identify missing combinations in a dataset and makes it easier to analyze gaps in the data.
+
+# Step 2: Watch Performance of Wrangling & Visualizing Data
+
+## **Prompt:** What do you think about David Robinson's impromptu screencast performance in Step 2? How much were you able to understand?
+
+After watching the screen cast by David Robinson I found it interesting because it showed the process of exploring and reviewing European energy data in R. Rather than following a precise outline he curated visualizations as he went along solving examined the dataset. From the video I was able to understand the concept of reshaping the data into tidy format. As well as, comparing the energy production from various countries and years by utilizing graphs. The part where I got stuck on was the debugging the coding. I found the video to be informational but also overwhelming as a beginner in R. 
+
+> Although I struggled with understanding the debugging, following the analyzing did help with concept comprehension.
+
+# Step 3: Compare Initial and Further Data Cleaning
+
+## **Prompt:** In Step 3, you saw two videos, one showing initial data cleaning and the other showing further cleaning. 
+
+### Describe the two processes. What are the big differences between the two?
+
+After watching the two videos I learned that initial data cleaning is centralized on preparing the working dataset at an entry level. When doing so the data may undergo, formatting issues that have to be fixed and filtering the irrelevant information. `The primary goal helps to make the dataset easier to work with and reliable to reference later on.` Initial data cleaning essentially does the bare minimum so that basic issues like errors are fixed and the rest of the data remains. While further data cleaning focuses on the more selective information in a dataset. It cleans out the records that aren't meeting the desired conditions. This can be seen when applying additional criteria such as inclusion and exclusion rules, removing unnecessary observations, and filtering the dataset. 
+
+### How do the differences result in the differences in final sample size?
+
+The differences between the two processes result in a different final sample size because the initial cleaning simply removes invalid information and duplicates. Compared to the further cleaning that is able to reduce the overall sample size because it undergoes various criteria and filters. 
+
+::: callout-note
+Further data cleaning will help you fix and remove any data that is unnecessary and that doesn't meet specified criteria.
+:::
+
+# Step 4: Understaning Revealjs Presentations
+
+## **Prompt:** In Step 4, you learned how to create an Revealjs presentation. What's your impression of the Revealjs presentation? Describe its capabilities as you learned from the video. What are its strengths and weaknesses compared with PPT?
+
+When comparing creating with the Revealjs presentation to creating with PowerPoint or Google Slides, I learned that it is more flexible in terms of building commands. The Revealjs presentation can be used to control transitions, animations, and themes. Which makes it more interactive when using Quarto. Some features that are explained are using slide zoom and speaker view. A strength that Revealjs has over PowerPoint is that it is very interactive and customizable since it is manually built by code. This type of presentation can be built and then published online relatively quickly. The weakness that I found with Revealjs is that it is more technical and is not an **entry level** presentation maker. Revealjs requires prior code knowledge that PowerPoint does not because it is prebuilt.
+
+# Step 5: Creating A Revealjs Presentation
+
+## **Prompt:** In Step 5, you were asked to create a Revealjs presentation. Provide a link to the presentation you published on the web. 
+
+<https://miap2324.github.io/portfolio-website-presentation/>
+
+### Briefly describe what the presentation is about. What did you learn from the experience of the Revealjs presentation?
+
+The presentation is about my preparation method for creating a professional portfolio website for myself. I elaborated on details regarding how I will primarily organize the content that I will include on my website (e.g. using Word document to write a layout). The presentation is structured to follow the website format, which has a home page, dashboard, etc. After working on this Revaljs presentation I learned that this manner of building a slideshow is much more complex and detailed than other platforms that I have used before. I also learned that the code in the presentation goes a long way, you can as specific as you'd like when creating your presentation. The revealjs presentation gives you much more freedom when curating a slideshow.
+
+# Step 6: Advanced Wrangling Concepts
+
+## **Prompt:** Pick three newly introduced concept, describe when to use them, and give one coding example along with an output for each function.
+
+| Function | Purpose |
+|--------|--------|
+| count() | Counts observations |
+| distinct() | Removes duplicates |
+| across() | Applies functions to multiple columns |
+
+
+::: panel-tabset
+## case_when()
+
+The case_when function is used when you want to substitute various if_else() statements and create categories based on conditions.
+
+***Example:***
+
+```{r}
+library(tidyverse)
+x <- 1:10
+
+case_when(
+  x < 5 ~ "small",
+  x < 8 ~ "medium",
+  TRUE ~ "large"
+)
+```
+
+## "across()"
+
+The function is used when you want to apply the same function to multiple columns at once, which saves time compared to writing the same code repeatedly.
+
+***Example:***
+
+```{r}
+library(dplyr)
+
+starwars %>% 
+  summarise(across(where(is.numeric), mean, na.rm = TRUE))
+```
+
+## "distinct()"
+
+The distinct() function is utilized to return unique rows from a data set.
+
+***Example:***
+
+```{r}
+# The unique value here is that of the "homeworld"
+
+library(dplyr)
+
+starwars %>% 
+  distinct(homeworld)
+```
+:::
+
+# Reflection on Data Wrangling as the Foundation of Data Analysis
+
+## **Prompt:** What did you like the most about working with the tools you learned in this module? Elaborate on your point.
+
+After working with the tools I learned in this module I learned that they made coding simpler to categorize. Additionally, it was efficiently teaching me how to transform complex data into a "tidier" format. As I keep learning more about using dplyr and tidyr, it made reshaping and filtering data readable compared to longer code. Furthermore, the lessons in this module are guiding the user in a process, such as, analyzing, organizing, and then creating a visualization. The tools within the module has made the wrangling process more ***structured*** and prepared you for the next steps as you go through the process.
+
+# Challenges in Learning Data Wrangling
+
+## **Prompt:** What seems to be the challenge, if any, for you when you try to master the wrangling tools? How may you be able to overcome the challenge?
+
+A personal challenge when trying to master the wrangling tools is recalling which functions are meant to create particular commands or visualizations. 
+
+-   Due to that fact that the tidyr and dplyr have an abundance of functions it becomes confusing. 
+-   When writing code, this challenge makes it all the more confusing and results in elongated research. 
+
+-   `I may overcome this challenge by referencing a code book, whether that is my own or one created by an instructor.` I also practice recall through repetition of functions and smaller data sets.
+
+# Published Report
+
+## **Prompt:** Publish this report to a web page (preferably on GitHub Pages) and add the URL to your qmd file so that your HTML file will have the link to the website.
